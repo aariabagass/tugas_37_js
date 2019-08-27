@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>js change attributes</title>
+</head>
+
+<body>
+  <button type="button" onclick="tombol()" name="button">Jalankan</button>
+  <br />
+  <br />
+  <hr />
+  Atribut <b>getNamedItem()</b> :
+  <p id="item">contoh</p>
+  <hr />
+  Atribut <b>name()</b> :
+  <p id="name">contoh</p>
+  <hr />
+  Atribut <b>length()</b> :
+  <p id="lenght">contoh</p>
+  <hr />
+
+  <script type="text/javascript">
+    var tombol = () => {
+      byTname = document.getElementsByTagName('button')[0];
+
+      a = byTname.attributes.getNamedItem('onclick').value;
+      document.getElementById('item').innerHTML = a;
+
+      b = byTname.attributes[0].name;
+      document.getElementById('name').innerHTML = b;
+
+      c = byTname.attributes.length;
+      document.getElementById('lenght').innerHTML = c;
+      return tombol;
+    }
+  </script>
+</body>
+
+</html>
